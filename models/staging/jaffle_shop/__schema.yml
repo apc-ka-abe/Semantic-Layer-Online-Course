@@ -5,8 +5,8 @@ sources:
     database: ka_abe
     schema: tutorial_dbt
     tables:
-      - name: customers
-      - name: orders
-      - name: items
-      - name: products
-      - name: supplies 
+      - name: jaffle_shop_customers
+      - name: jaffle_shop_orders
+      - name: jaffle_shop_items
+      - name: jaffle_shop_products
+      - name: jaffle_shop_supplies 
