@@ -39,3 +39,12 @@ models:
       +materialized: view
     marts:
       +materialized: table
+  dbt_artifacts:
+    +database: ka_abe
+    +schema: dbt_artifacts
+    staging:
+      +database: ka_abe
+      +schema: dbt_artifacts_stg
+sources:
+  +database: ka_abe
+  +schema: dbt_artifacts_raw
