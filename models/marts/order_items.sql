@@ -1,9 +1,3 @@
--- {{ config(
---     post_hook=[
---         "OPTIMIZE order_items;"
---         ]
--- ) }}
-
 with 
 
 order_items as (
