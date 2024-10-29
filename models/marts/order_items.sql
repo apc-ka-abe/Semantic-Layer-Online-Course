@@ -1,8 +1,8 @@
-{{ config(
-    post_hook=[
-        "OPTIMIZE order_items;"
-        ]
-) }}
+-- {{ config(
+--     post_hook=[
+--         "OPTIMIZE order_items;"
+--         ]
+-- ) }}
 
 with 
 
