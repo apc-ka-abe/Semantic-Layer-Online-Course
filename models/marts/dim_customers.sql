@@ -1,3 +1,10 @@
+{{ config(
+    post_hook=[
+        "OPTIMIZE {{dim_customers}} ZORDER BY customer_id;",
+        "ANALYZE TABLE {{dim_customers}} COMPUTE STATISTICS FOR ALL COLUMNS;"
+        ]
+) }}
+
 with
 
 customers as (
