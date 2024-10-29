@@ -1,7 +1,6 @@
 {{ config(
     post_hook=[
-        "OPTIMIZE {{fct_orders}} ZORDER BY customer_id;",
-        "ANALYZE TABLE {{fct_orders}} COMPUTE STATISTICS FOR ALL COLUMNS;"
+        "OPTIMIZE {{fct_orders}};",
         ]
 ) }}
 
