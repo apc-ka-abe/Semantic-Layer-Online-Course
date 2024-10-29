@@ -1,6 +1,6 @@
 {{ config(
     post_hook=[
-        "OPTIMIZE {{order_items}};"
+        "OPTIMIZE order_items;"
         ]
 ) }}
 

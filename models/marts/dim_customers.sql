@@ -1,6 +1,6 @@
 {{ config(
     post_hook=[
-        "OPTIMIZE {{dim_customers}};"
+        "OPTIMIZE dim_customers;"
         ]
 ) }}
 

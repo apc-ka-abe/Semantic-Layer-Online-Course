@@ -1,6 +1,6 @@
 {{ config(
     post_hook=[
-        "OPTIMIZE {{fct_orders}};",
+        "OPTIMIZE fct_orders;"
         ]
 ) }}
 
