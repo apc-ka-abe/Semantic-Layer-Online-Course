@@ -1,6 +1,6 @@
 {{ config(
     post_hook=[
-        "OPTIMIZE fct_orders;"
+        "OPTIMIZE ka_abe.dbt_dbx_webinar.fct_orders;"
         ]
 ) }}
 

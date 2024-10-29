@@ -1,3 +1,9 @@
+{{ config(
+    post_hook=[
+        "OPTIMIZE ka_abe.dbt_dbx_webinar.order_items;"
+        ]
+) }}
+
 with 
 
 order_items as (
