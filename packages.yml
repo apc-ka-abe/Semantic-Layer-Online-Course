@@ -6,3 +6,5 @@ packages:
     # <see https://github.com/calogica/dbt-date/releases/latest> for the latest version tag
   - package: dbt-labs/dbt_project_evaluator
     version: 0.13.2
+  - package: brooklyn-data/dbt_artifacts
+    version: 2.2.1
