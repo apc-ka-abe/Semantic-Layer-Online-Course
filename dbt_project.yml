@@ -14,7 +14,7 @@ profile: "databricks"
 model-paths: ["models"]
 analysis-paths: ["analyses"]
 test-paths: ["tests"]
-seed-paths: ["jaffle-data"]
+seed-paths: ["seeds"]
 macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
 
@@ -24,6 +24,7 @@ clean-targets: # directories to be removed by `dbt clean`
   - "dbt_packages"
   - "logs"
 
+require-dbt-version: [">=1.0.0", "<2.0.0"]
 
 vars:
   truncate_timespan_to: "{{ current_timestamp() }}"
