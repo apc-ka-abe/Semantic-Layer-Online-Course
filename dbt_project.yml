@@ -50,11 +50,11 @@ models:
     marts:
       +database: ka_abe
       # +schema: dbt_artifacts_marts
-      +schema: ka_abe_dbt_gold
+      +schema: dbt_gold
     staging:
       +database: ka_abe
       # +schema: dbt_artifacts_stg
-      +schema: ka_abe_dbt_silver
+      +schema: dbt_silver
 # sources:
 #   +database: ka_abe
 #   +schema: dbt_artifacts_raw
