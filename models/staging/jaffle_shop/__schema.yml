@@ -3,7 +3,7 @@ version: 2
 sources:
   - name: jaffle_shop
     database: ka_abe
-    schema: tutorial_dbt
+    schema: ka_abe_dbt_bronze
     tables:
       - name: jaffle_shop_customers
       - name: jaffle_shop_orders

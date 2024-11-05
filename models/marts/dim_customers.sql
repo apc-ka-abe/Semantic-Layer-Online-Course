@@ -1,6 +1,6 @@
 {{ config(
     post_hook=[
-        "OPTIMIZE ka_abe.dbt_dbx_webinar.dim_customers;"
+        "OPTIMIZE ka_abe.ka_abe_dbt_gold.dim_customers;"
         ]
 ) }}
 
