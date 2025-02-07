@@ -46,15 +46,15 @@ models:
       +materialized: table
       # +database: ka_abe
       +schema: dbt_gold
-  dbt_artifacts:
-    marts:
-      +database: ka_abe
-      # +schema: dbt_artifacts_marts
-      +schema: dbt_gold
-    staging:
-      +database: ka_abe
-      # +schema: dbt_artifacts_stg
-      +schema: dbt_silver
+  # dbt_artifacts:
+  #   marts:
+  #     +database: ka_abe
+  #     # +schema: dbt_artifacts_marts
+  #     +schema: dbt_gold
+  #   staging:
+  #     +database: ka_abe
+  #     # +schema: dbt_artifacts_stg
+  #     +schema: dbt_silver
 # sources:
 #   +database: ka_abe
 #   +schema: dbt_artifacts_raw
