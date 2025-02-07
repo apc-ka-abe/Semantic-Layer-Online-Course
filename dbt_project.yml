@@ -6,7 +6,7 @@ version: "1.0.0"
 config-version: 2
 
 # This setting configures which "profile" dbt uses for this project.
-profile: "databricks"
+profile: "Databricks_abe"
 
 # These configurations specify where dbt should look for different types of files.
 # The `model-paths` config, for example, states that models in this project can be
@@ -14,7 +14,7 @@ profile: "databricks"
 model-paths: ["models"]
 analysis-paths: ["analyses"]
 test-paths: ["tests"]
-seed-paths: ["jaffle-data"]
+# seed-paths: ["seeds"]
 macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
 
@@ -22,6 +22,9 @@ target-path: "target" # directory which will store compiled SQL files
 clean-targets: # directories to be removed by `dbt clean`
   - "target"
   - "dbt_packages"
+  - "logs"
+
+require-dbt-version: [">=1.0.0", "<2.0.0"]
 
 vars:
   truncate_timespan_to: "{{ current_timestamp() }}"
@@ -36,6 +39,25 @@ vars:
 models:
   jaffle_shop:
     staging:
-      +materialized: view
+      +materialized: table
+      # +database: ka_abe
+      +schema: dbt_silver
     marts:
       +materialized: table
+      # +database: ka_abe
+      +schema: dbt_gold
+  dbt_artifacts:
+    marts:
+      +database: ka_abe
+      # +schema: dbt_artifacts_marts
+      +schema: dbt_gold
+    staging:
+      +database: ka_abe
+      # +schema: dbt_artifacts_stg
+      +schema: dbt_silver
+# sources:
+#   +database: ka_abe
+#   +schema: dbt_artifacts_raw
+
+# on-run-end:
+  # - "{{ dbt_artifacts.upload_results(results) }}"

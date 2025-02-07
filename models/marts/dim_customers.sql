@@ -1,3 +1,9 @@
+{{ config(
+    post_hook=[
+        "OPTIMIZE ka_abe.ka_abe_dbt_gold.dim_customers;"
+        ]
+) }}
+
 with
 
 customers as (

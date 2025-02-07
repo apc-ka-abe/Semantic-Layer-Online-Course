@@ -1,3 +1,9 @@
+{{ config(
+    post_hook=[
+        "OPTIMIZE ka_abe.ka_abe_dbt_gold.order_items;"
+        ]
+) }}
+
 with 
 
 order_items as (

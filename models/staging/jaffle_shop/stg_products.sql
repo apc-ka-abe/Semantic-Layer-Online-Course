@@ -1,4 +1,8 @@
-
+{{ config(
+    post_hook=[
+        "OPTIMIZE ka_abe.ka_abe_dbt_silver.stg_order_items;"
+        ]
+) }}
 with
 
 source as (
